@@ -159,9 +159,7 @@ fn main() {
         last_time = now;
         total_time += dt;
         time_it! {
-          for i in buffer.iter_mut() {
-              *i = BLACK;
-          }
+          buffer.fill(BLACK);
           draw(&mut buffer, dt, total_time);
         };
         time_it! {
